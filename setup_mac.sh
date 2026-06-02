@@ -24,6 +24,10 @@ exit 0
 # TODO finder. show all file extensions. finder -> settings -> advance -> show all file extensions
 # TODO finder. show hidden files. cmd + shift + . or defaults write com.apple.finder AppleShowAllFiles True; killall Finder
 # replace shortcut for raycast by disable spotlight. "system setting" -> "keyboard shortcut" -> "spotlight"
+# Disable Spotlight search shortcut
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>" # disable
+killall SystemUIServer # login/out
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><true/></dict>" # re-enable
 # defaults write com.apple.finder AppleShowAllFiles False; killall Finder
 # Those will unhide all, for individual files paste       sudo chflags nohidden
 # show / turn off dock: command + option + d

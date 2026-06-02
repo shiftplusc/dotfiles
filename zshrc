@@ -159,6 +159,12 @@ SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
 # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_DUPS
+setopt APPEND_HISTORY         # Append, don’t overwrite, history file
+setopt INC_APPEND_HISTORY     # Write history after each command
+setopt SHARE_HISTORY          # Share history between sessions
+setopt HIST_IGNORE_SPACE      # Ignore commands starting with space
+setopt HIST_SAVE_BY_COPY
+setopt HIST_FCNTL_LOCK
 
 # https://github.com/processone/fast_tls
 export LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
@@ -174,3 +180,8 @@ echo "zshrc file loaded"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ysc/.lmstudio/bin"
+# End of LM Studio CLI section
+
