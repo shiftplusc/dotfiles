@@ -241,8 +241,6 @@ cask "iterm2"
 cask "jetbrains-toolbox"
 # App to manage software development and track bugs
 cask "linear"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # Provides updates to various Microsoft products

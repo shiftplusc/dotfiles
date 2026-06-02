@@ -180,8 +180,3 @@ echo "zshrc file loaded"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/ysc/.lmstudio/bin"
-# End of LM Studio CLI section
-
